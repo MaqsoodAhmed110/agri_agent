@@ -6,8 +6,7 @@ langchain-groq
 langchain-community
 langchain-openai
 langgraph
-langgraph-checkpoint-postgres
-aiosqlite
+langgraph-checkpoint-sqlite
 aiosqlite
 psycopg[binary]
 psycopg_pool
@@ -18,3 +17,6 @@ duckduckgo-search
 sentence-transformers
 faiss-cpu
 PyPDF2
+ragas
+datasets
+pandas
