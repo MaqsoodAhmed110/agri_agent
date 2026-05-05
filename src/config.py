@@ -8,7 +8,7 @@ load_dotenv()
 # Must be set before any langchain import takes effect.
 # These are read automatically by LangChain/LangGraph internals.
 os.environ["LANGCHAIN_TRACING_V2"] = os.getenv("LANGCHAIN_TRACING_V2", "true")
-os.environ["LANGCHAIN_API_KEY"]    = os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_API_KEY"]    = os.getenv("LANGCHAIN_API_KEY", "")
 os.environ["LANGCHAIN_PROJECT"]    = os.getenv("LANGCHAIN_PROJECT", "agriculture-advisor-ai407l")
 
 
@@ -37,5 +37,5 @@ class Config:
 
     # ── LangSmith Observability ───────────────────────────────
     LANGCHAIN_TRACING_V2: str = os.getenv("LANGCHAIN_TRACING_V2", "true")
-    LANGCHAIN_API_KEY: str    = os.getenv("LANGCHAIN_API_KEY")
+    LANGCHAIN_API_KEY: str    = os.getenv("LANGCHAIN_API_KEY", "")
     LANGCHAIN_PROJECT: str    = os.getenv("LANGCHAIN_PROJECT", "agriculture-advisor-ai407l")
