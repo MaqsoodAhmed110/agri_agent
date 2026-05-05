@@ -6,13 +6,13 @@ import os
 import logging
 
 # Ensure langchain_community is installed: pip install langchain-community duckduckgo-search
-from langchain_community.tools import DuckDuckGoSearchRun
+from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
 
 logger = logging.getLogger(__name__)
 
 class SearchInput(BaseModel):
     query: str = Field(description="The specific search query to look up in agriculture research papers")
-    k: int = Field(default=5, description="Number of relevant research chunks to retrieve")
+    k: int = Field(default=3, description="Number of relevant research chunks to retrieve")
 
 class YieldInput(BaseModel):
     crop: str = Field(description="The name of the crop (e.g., wheat, rice, cotton)")
@@ -62,7 +62,10 @@ def search_agriculture_research(query: str, k: int = 5) -> str:
         meta = res.get('metadata', {})
         title = meta.get('paper_title', 'Unknown Title')
         year = meta.get('year', 'Unknown Year')
+        # Truncate content to avoid token limits (Groq 413 error)
         content = res.get('chunk', 'No content')
+        if len(content) > 1500:
+            content = content[:1500] + "... [truncated]"
         context.append(f"Source: {title} (Year: {year})\nContent: {content}")
     
     return "\n\n---\n\n".join(context)
@@ -91,9 +94,8 @@ def calculate_estimated_yield(crop: str, area_acres: float, region: str) -> str:
 @tool("duckduckgo_internet_search", args_schema=DuckDuckGoSearchInput)
 def duckduckgo_internet_search(query: str) -> str:
     """Performs a general internet search using DuckDuckGo to find information beyond the local research papers.
-    Use this for broader or more current information that might not be in the agricultural research database.
-    Always prefer the 'search_agriculture_research' tool for specific, research-backed agricultural data."""
-    search = DuckDuckGoSearchRun()
+    Use this for broader or more current information that might not be in the agricultural research database."""
+    search = DuckDuckGoSearchAPIWrapper()
     try:
         results = search.run(query)
         if not results:
