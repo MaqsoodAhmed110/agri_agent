@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+.env
+.venv
+build/
+dist/
+*.egg-info/
+
+# Databases
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Secrets & Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# CI/CD Artifacts (Generated during runs)
+ci_eval_results.json
+api_test_results.txt
+
+# Large Binaries & Temporary files
+*.zip
+*.exe
+*.pdf
+Assignment02.zip
+Miniconda3-installer.exe
+
+# OS files
+.DS_Store
+Thumbs.db

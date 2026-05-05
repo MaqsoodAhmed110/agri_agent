@@ -1,0 +1,93 @@
+{
+  "dashboard": {
+    "title": "Agriculture Agent Metrics",
+    "panels": [
+      {
+        "title": "Total Queries",
+        "type": "stat",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "targets": [
+          {
+            "expr": "agent_queries_total",
+            "legendFormat": "Queries"
+          }
+        ]
+      },
+      {
+        "title": "Average Latency (ms)",
+        "type": "stat",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "targets": [
+          {
+            "expr": "rate(agent_latency_ms_sum[5m]) / rate(agent_latency_ms_count[5m])",
+            "legendFormat": "Latency"
+          }
+        ],
+        "format": "ms"
+      },
+      {
+        "title": "Latency Over Time",
+        "type": "graph",
+        "gridPos": {
+          "h": 8,
+          "w": 24,
+          "x": 0,
+          "y": 8
+        },
+        "targets": [
+          {
+            "expr": "rate(agent_latency_ms_sum[5m]) / rate(agent_latency_ms_count[5m])",
+            "legendFormat": "Latency"
+          }
+        ]
+      },
+      {
+        "title": "Errors",
+        "type": "stat",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 16
+        },
+        "targets": [
+          {
+            "expr": "agent_errors_total",
+            "legendFormat": "Errors"
+          }
+        ]
+      },
+      {
+        "title": "Chunks Retrieved",
+        "type": "stat",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 16
+        },
+        "targets": [
+          {
+            "expr": "chunks_retrieved_count",
+            "legendFormat": "Chunks"
+          }
+        ]
+      }
+    ],
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    }
+  },
+  "overwrite": true
+}

@@ -1,0 +1,10 @@
+{
+    "faithfulness": {
+        "threshold": 0.75,
+        "description": "Ensures the answer is derived strictly from the retrieved research documents."
+    },
+    "answer_relevancy": {
+        "threshold": 0.80,
+        "description": "Ensures the answer directly addresses the farmer's specific agricultural query."
+    }
+}

@@ -1,0 +1,43 @@
+services:
+  # Service 1: Back-end Data Store (Postgres for persistence)
+  agri-db:
+    image: postgres:15-alpine
+    container_name: agri-db
+    restart: always
+    environment:
+      POSTGRES_DB: agridb
+      POSTGRES_USER: agriuser
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-agri_pass_123}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agriuser -d agridb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Service 2: Agent API
+  agri-api:
+    build: .
+    container_name: agri-api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      # Secrets injected at runtime from .env
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      PERSISTENCE_MODE: postgres
+      DATABASE_URL: postgresql://agriuser:${POSTGRES_PASSWORD:-agri_pass_123}@agri-db:5432/agridb
+      
+      # Data paths (pointing to mounted volumes)
+      PDF_DATA_PATH: /app/data/raw_pdfs
+      EMBEDDINGS_DATA_PATH: /app/data/embeddings
+    volumes:
+      # Persistent volume for the FAISS vector index and PDF data
+      - ./data:/app/data
+    depends_on:
+      agri-db:
+        condition: service_healthy
+
+volumes:
+  db_data:

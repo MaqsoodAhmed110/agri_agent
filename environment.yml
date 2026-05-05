@@ -1,0 +1,11 @@
+name: agriculture-agent
+channels:
+  # Best practice: use conda-forge first for updated packages (FAISS, PyMuPDF, etc.)
+  - conda-forge
+  - defaults
+dependencies:
+  # Changed from 3.10 to a modern version for better binary wheel compatibility
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements.txt

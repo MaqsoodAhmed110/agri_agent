@@ -1,0 +1,333 @@
+{
+  "evaluation_timestamp": "2026-05-05T00:47:17.609912",
+  "total_queries": 20,
+  "scoring_method": "fallback_keyword_overlap",
+  "aggregate_scores": {
+    "faithfulness": 0.0,
+    "answer_relevancy": 0.0,
+    "tool_call_accuracy": 1.0,
+    "average_latency_ms": 4112.4
+  },
+  "per_query_results": [
+    {
+      "id": 1,
+      "query": "What are the best wheat varieties for clay soil in Punjab during Rabi season?",
+      "query_type": "vector_store",
+      "ground_truth": "For clay soil in Punjab during Rabi season, recommended wheat varieties include Faisalabad-2008, Punjab-2011, and NARC-2009. These varieties are well-adapted to the heavy clay soils of central Punjab and perform best when sown in November. Key practices include proper land leveling for uniform irrigation and application of DAP fertilizer at sowing.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 2355.48,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 2,
+      "query": "Estimate the yield for 25 acres of rice in Sindh with good soil quality.",
+      "query_type": "tool_call",
+      "ground_truth": "For 25 acres of rice cultivation in Sindh with good soil quality, the estimated yield is approximately 750 to 875 maunds (30 to 35 maunds per acre). Sindh's clay-rich soils and warm Kharif temperatures are ideal for rice. Proper water management and pest control can push yields toward the higher end.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 700.52,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 3,
+      "query": "What fertilizer is recommended for cotton cultivation in sandy soil?",
+      "query_type": "vector_store",
+      "ground_truth": "For cotton in sandy soil, a balanced fertilizer program is critical due to rapid nutrient leaching. Recommended approach: apply DAP at 50kg per acre at sowing, urea in split doses (50kg at sowing, 50kg at square formation), and potassium sulfate at 25kg per acre. Sandy soils require more frequent irrigation and foliar micronutrient sprays to compensate for poor nutrient retention.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 660.9,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 4,
+      "query": "Calculate yield for 10 acres of maize with average soil quality.",
+      "query_type": "tool_call",
+      "ground_truth": "For 10 acres of maize with average soil quality, the estimated yield is approximately 400 to 450 maunds (40 to 45 maunds per acre). Maize performs well across soil types but benefits from well-drained loamy conditions. Average soil quality typically reduces yield by 10 to 15 percent compared to optimal conditions.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 455.28,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 5,
+      "query": "What are the irrigation requirements for sugarcane in Punjab?",
+      "query_type": "vector_store",
+      "ground_truth": "Sugarcane in Punjab requires heavy irrigation due to its long growing cycle of 12 to 14 months. Total water requirement is 1500 to 2000mm per season. Irrigation should be applied every 10 to 15 days during summer and every 20 to 25 days in winter. Furrow irrigation is most common, though drip irrigation can reduce water use by 30 to 40 percent. Critical irrigation periods are germination, tillering, and grand growth stages.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 770.81,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 6,
+      "query": "Estimate yield for 50 acres of cotton with poor soil quality in Sindh.",
+      "query_type": "tool_call",
+      "ground_truth": "For 50 acres of cotton with poor soil quality, the estimated yield is approximately 1000 to 1250 maunds (20 to 25 maunds per acre). Poor soil quality significantly reduces cotton yield potential. Soil amelioration through gypsum application, organic matter addition, and improved drainage can help recover some yield potential over subsequent seasons.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 456.61,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 7,
+      "query": "What are the common pest problems in rice cultivation in Pakistan?",
+      "query_type": "vector_store",
+      "ground_truth": "Major pests in rice cultivation in Pakistan include: stem borer (Scirpophaga species) causing deadheart and whitehead symptoms, brown planthopper causing hopperburn, rice leaf folder damaging leaf area, and gall midge. Integrated pest management involves timely sowing, resistant varieties like KSK-133, light traps, and targeted insecticide application only when pest populations exceed economic threshold levels.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 632.86,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 8,
+      "query": "Calculate the estimated yield for 100 acres of wheat with good soil quality.",
+      "query_type": "tool_call",
+      "ground_truth": "For 100 acres of wheat with good soil quality, the estimated yield is approximately 3500 to 4000 maunds (35 to 40 maunds per acre). Good soil quality combined with proper agronomic practices including timely sowing in November, balanced NPK fertilization, and adequate irrigation at critical stages can achieve these yield targets consistently.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 353.71,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 9,
+      "query": "What is the recommended sowing time for chickpea in Pakistan?",
+      "query_type": "vector_store",
+      "ground_truth": "The recommended sowing time for chickpea (gram) in Pakistan is mid-October to mid-November for the Rabi season. Early sowing (before October 15) exposes the crop to warm temperatures causing excessive vegetative growth. Late sowing (after November 15) shortens the growing period and reduces yield. Punjab and KPK are primary chickpea growing regions with varieties CM-98 and Bhakkar-2011 being widely recommended.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 843.91,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 10,
+      "query": "Estimate yield for 15 acres of sugarcane with good soil quality.",
+      "query_type": "tool_call",
+      "ground_truth": "For 15 acres of sugarcane with good soil quality, the estimated yield is approximately 9000 to 12000 maunds (600 to 800 maunds per acre). Sugarcane is among the highest-yielding crops by weight. Good soil quality, timely irrigation, and proper ratooning management are critical factors in achieving these yields in Punjab and Sindh.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 3667.8,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 11,
+      "query": "What are the symptoms and treatment of leaf rust disease in wheat?",
+      "query_type": "vector_store",
+      "ground_truth": "Wheat leaf rust (Puccinia triticina) appears as small, circular to oval, orange-brown pustules on the upper leaf surface, typically between heading and grain fill stages. Treatment includes: use of resistant varieties (Ujala-2016, Galaxy-2013), seed treatment with fungicide, and foliar application of Propiconazole or Tebuconazole at disease onset. Economic threshold is 5 to 10 percent leaf area affected. Early application is critical as yield losses can reach 30 to 40 percent in severe cases.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 4847.3,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 12,
+      "query": "Calculate yield for 30 acres of potato with average soil quality in KPK.",
+      "query_type": "tool_call",
+      "ground_truth": "For 30 acres of potato with average soil quality, the estimated yield is approximately 4500 to 6000 maunds (150 to 200 maunds per acre). KPK's cool climate and loamy soils are well-suited for potato production. Average soil quality may reduce yields by 15 to 20 percent compared to optimal conditions. Proper seed selection, hilling, and disease management are key yield determinants.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 9572.73,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 13,
+      "query": "What cover crops can improve soil fertility between seasons in Punjab?",
+      "query_type": "vector_store",
+      "ground_truth": "Effective cover crops for soil fertility improvement in Punjab include: Sesbania (Jantar) which fixes atmospheric nitrogen at 80 to 100 kg/ha when incorporated as green manure, clover for nitrogen fixation and organic matter, sunhemp for rapid biomass production, and mung bean which fixes nitrogen and provides a short-season grain crop. These are typically grown between Rabi harvest (April) and Kharif sowing (June) and incorporated 30 to 45 days before the next crop.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 2677.84,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 14,
+      "query": "How do I manage waterlogging in rice fields in Sindh during monsoon?",
+      "query_type": "vector_store",
+      "ground_truth": "Waterlogging management in Sindh rice fields during monsoon involves: installing field drains at 25 to 30 meter spacing with a depth of 45 to 60 cm, maintaining bunds at appropriate height to control water depth at 5 to 10 cm for transplanted rice, using raised bed systems where feasible, monitoring salinity as waterlogging accelerates salt accumulation, and installing pumping stations for emergency drainage. Varieties with submergence tolerance like IRRI-6 perform better under temporary flooding conditions.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 7899.65,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 15,
+      "query": "Estimate yield for 20 acres of mustard with poor soil quality in Balochistan.",
+      "query_type": "tool_call",
+      "ground_truth": "For 20 acres of mustard with poor soil quality, the estimated yield is approximately 150 to 200 maunds (7.5 to 10 maunds per acre). Mustard is relatively drought and poor-soil tolerant compared to other Rabi crops. In Balochistan's sandy, low-fertility soils, proper phosphorus application at sowing and a single supplemental irrigation can substantially improve yields above this baseline.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 7743.69,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 16,
+      "query": "What is the best method for composting agricultural waste in Pakistan?",
+      "query_type": "vector_store",
+      "ground_truth": "The most effective composting method for Pakistani conditions is aerobic windrow composting. Steps include: collect crop residues, animal manure, and kitchen waste in layers (carbon to nitrogen ratio of 25:1 to 30:1), maintain windrow dimensions of 1.5m height and 2m width, turn the pile every 7 to 10 days to maintain aerobic conditions and temperature between 55 to 65 degrees Celsius, maintain moisture at 50 to 60 percent. Compost matures in 60 to 90 days. Adding phosphate rock during composting enhances nutrient content.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 4821.8,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 17,
+      "query": "Calculate yield for 75 acres of barley with good soil quality.",
+      "query_type": "tool_call",
+      "ground_truth": "For 75 acres of barley with good soil quality, the estimated yield is approximately 1875 to 2250 maunds (25 to 30 maunds per acre). Barley is a drought-tolerant Rabi crop suited to sandy and loamy soils. Good soil quality and optimal agronomic management including timely sowing in October-November, balanced fertilization, and limited but timely irrigation can achieve yields at the higher end of this range.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 12535.73,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 18,
+      "query": "What are the organic farming practices for vegetable production in KPK?",
+      "query_type": "vector_store",
+      "ground_truth": "Organic vegetable production in KPK relies on: farm yard manure at 20 to 25 tonnes per hectare incorporated before planting, vermicompost for transplanted vegetables like tomato and pepper, neem-based biopesticides for insect control, crop rotation with legumes for nitrogen cycling, mulching with wheat straw to conserve moisture and suppress weeds, and intercropping with marigold as a natural pest deterrent. KPK's cooler climate and spring water availability make it well-suited for high-value organic vegetables including potato, tomato, and leafy vegetables.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 9838.45,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 19,
+      "query": "Calculate yield for 40 acres of mung bean with average soil quality.",
+      "query_type": "tool_call",
+      "ground_truth": "For 40 acres of mung bean with average soil quality, the estimated yield is approximately 320 to 400 maunds (8 to 10 maunds per acre). Mung bean is a short-duration Kharif crop commonly grown as an inter-crop or summer crop. Average soil quality is typical for mung bean cultivation. As a legume, it improves soil nitrogen for subsequent crops, making it valuable beyond its direct grain yield.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "calculate_estimated_yield",
+      "tool_called": "calculate_estimated_yield",
+      "tool_accuracy": 1.0,
+      "latency_ms": 6591.49,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    },
+    {
+      "id": 20,
+      "query": "What are the water stress management techniques for wheat during dry spells in Punjab?",
+      "query_type": "vector_store",
+      "ground_truth": "Water stress management in Punjab wheat during dry spells includes: prioritizing irrigation at five critical stages (crown root initiation at 21 days, tillering at 45 days, jointing at 65 days, booting at 80 days, and grain filling at 105 days), applying anti-transpirant sprays like kaolin at 5 percent concentration to reduce transpiration, mulching with crop residues between rows, using deficit irrigation strategies that allow mild stress between critical periods, and selecting drought-tolerant varieties like NARC-09 and Ufaq-2016 that maintain yield under water-limited conditions.",
+      "answer": "",
+      "contexts": [
+        "No context retrieved"
+      ],
+      "expected_tool": "search_agriculture_research",
+      "tool_called": "search_agriculture_research",
+      "tool_accuracy": 1.0,
+      "latency_ms": 4821.51,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0
+    }
+  ]
+}

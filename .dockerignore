@@ -1,0 +1,30 @@
+# Local environment files (Secrets)
+.env
+env/
+venv/
+.python-version
+
+# Local databases and caches
+*.sqlite
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+
+# Git data
+.git
+.gitignore
+
+# Data folder (should be mounted as a volume instead of baked in)
+data/raw_pdfs
+data/embeddings
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large Installers and Zips
+*.exe
+*.zip
+*.msi
+*.7z

@@ -1,0 +1,58 @@
+LANGSMITH OBSERVABILITY — Agriculture Multi-Agent Advisor
+=========================================================
+Course: AI407L — Agentic AI (Spring 2026)
+Project: Part A — Multi-Agent LangGraph Agriculture Advisor
+
+SETUP INSTRUCTIONS
+------------------
+To connect your agent to LangSmith, add these lines to your .env file:
+
+    LANGCHAIN_TRACING_V2=true
+    LANGCHAIN_API_KEY=your_langsmith_api_key_here
+    LANGCHAIN_PROJECT=agriculture-advisor-ai407l
+
+Then run the app normally:
+    python -m streamlit run app/main.py
+
+LangSmith will automatically capture all traces — no code changes needed.
+LangChain/LangGraph sends traces automatically when LANGCHAIN_TRACING_V2=true.
+
+GET YOUR FREE API KEY
+---------------------
+1. Sign up at: https://smith.langchain.com (free tier available)
+2. Go to Settings -> API Keys -> Create API Key
+3. Paste the key into your .env file as shown above
+
+YOUR PROJECT LINK
+-----------------
+After running at least one query, your project will appear at:
+    https://smith.langchain.com/projects/agriculture-advisor-ai407l
+
+To make a trace public (for submission):
+1. Open LangSmith dashboard
+2. Go to your project -> select a complex trace
+3. Click "Share" -> "Make Public"
+4. Copy the public URL and paste it below
+
+PUBLIC TRACE URL (fill this in after running):
+----------------------------------------------
+    https://smith.langchain.com/public/[your-trace-id-here]/r
+
+WHAT TO LOOK FOR IN TRACES
+---------------------------
+Each trace shows your LangGraph execution as a tree:
+- RunnableSequence (root)
+  - researcher         <- LLM call latency here
+  - ToolNode           <- FAISS / web search latency here
+  - researcher         <- second LLM call if tool was used
+  - writer             <- final synthesis latency here
+
+Click any node to see:
+  - Input messages sent to the LLM
+  - Output messages / tool calls returned
+  - Token count (input + output)
+  - Latency in milliseconds
+  - Any errors or exceptions
+
+For your bottleneck analysis, sort traces by "Total Latency" descending
+and examine the longest-running queries to identify which node dominates.
